@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      
+      .divbackground{
+        width: 100%;
+      }
+
+      .wrapper2{
+        width: 100%;
+        background-color: #030f27;
+      }
+
+      .button1 {background-color: #4CAF50;} /* Green */
+      .button2 {background-color: #008CBA;} /* Blue */
+    </style>
+    <meta charset="utf-8">
+    <title>Parisodan-Researcher's ornament</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon-->
+    <link href="../static/img/scientific_research_icon.png" rel="shortcut icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="../static/lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+    <link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="../static/lib/slick/slick.css" rel="stylesheet">
+    <link href="../static/lib/slick/slick-theme.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../static/css/style_project5.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper2">
+      <!-- Top Bar Start -->
+      <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-12 col-md-12">
+                    <div class="logo">
+                        <a href="index">
+                            <h1 style="font-size: 2rem; text-align: center;">Parisodan-Researcher's Ornament</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Top Bar End -->
+
+      <!-- Nav Bar Start -->
+      <div class="nav-bar">
+          <div class="container-fluid">
+              <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                  <a href="#" class="navbar-brand">MENU</a>
+                  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                      <div class="navbar-nav mr-auto">
+                          <a href="index" class="nav-item nav-link ">Home</a>
+                          <a href="about" class="nav-item nav-link">About</a>
+                          <div class="nav-item dropdown">
+                              <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Resources</a>
+                              <div class="dropdown-menu">
+                                  <a href="pdfsearch" class="dropdown-item">PDF search</a>
+                                  <a href="wikisearch" class="dropdown-item">Wiki search</a>
+                                  <a href="paragraph" class="dropdown-item">Paragraph search</a>
+                              </div>
+                          </div>
+                          <a href="team" class="nav-item nav-link">Team</a>
+                      </div>
+                  </div>
+              </nav>
+          </div>
+      </div>
+      <!-- Nav Bar End -->
+      <br>
+      <div class = "divbackground container">
+        <br>
+        <h3 style = "color: #FBD603; text-align: center;">It is time to test Paragraph Search!!!</h3>
+        <br>
+        <form role="form" method='POST' action='#'>
+          <div class="form-group">
+            <label for="paragraph">Enter a Paragraph</label>
+            <textarea name="paragraph" class="form-control" id="url-box" style = "min-height: 100px;" placeholder="Enter a paragraph" autofocus required>
+              {% if result %}
+                        {{ result[2] }}
+                    {% endif %}
+            </textarea>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="question">Ask a Question</label>
+            <input type="text" name="question" class="form-control" id="url-box" placeholder="Enter a question" autofocus required>
+          </div>
+          <button type="submit" class="button button1">Predict</button>
+        </form>
+
+        <br>
+
+        <div class="row" style = "background-color: white; justify-content: center;">
+            <div>
+              {% if result %}
+              <h4 style = "color: #FBD603; text-align: center;" >Question = {{ result[0] }}</h4>
+              <h4 style = "color: #FBD603; text-align: center;" >Answer= {{ result[1] }}</h4>
+              {% endif %}
+            </div>
+        </div>
+
+      </div>
+              
+    <!-- Footer Start -->
+    <div class="footer wow fadeIn" data-wow-delay="0.3s">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 col-lg-3">
+                  <div class="footer-contact">
+                      <h2>Team Leader's Contact Details</h2>
+                      <p><i class="fa fa-phone-alt"></i>+91 99003 00840</p>
+                      <p><i class="fa fa-envelope"></i>yashwant18@iitg.ac.in</p>
+                      <!--Social Networking Details. Can be added if needed-->
+                      <div class="footer-social">
+                          <a href=""><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.facebook.com/yashwanth.m.93"><i class="fab fa-facebook-f"></i></a>
+                          <a href=""><i class="fab fa-youtube"></i></a>
+                          <a href=""><i class="fab fa-instagram"></i></a>
+                          <a href=""><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+              </div>
+              <div class="col-md-6 col-lg-3">
+              </div>
+              <div class="col-md-6 col-lg-3">
+                  <div class="footer-link">
+                      <h2>Useful Pages</h2>
+                      <a href="index">Home Page</a>
+                      <a href="about">About</a>
+                      <a href="team">Our Team</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container copyright">
+          <div class="row">
+              <div class="col-md-6">
+                  <p>&copy; <a href="#">Parisodan</a>, All Right Reserved.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer End -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  </div>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/slick/slick.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+    </div>
+  </body>
+</html>
